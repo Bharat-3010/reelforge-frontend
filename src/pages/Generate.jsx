@@ -28,10 +28,7 @@ export default function Generate() {
 
     try {
 
-      const response = await API.post(
-        "/ai/generate",
-        formData
-      );
+      const response = await API.post("/ai/generate", formData);
 
       setResult(response.data);
 
