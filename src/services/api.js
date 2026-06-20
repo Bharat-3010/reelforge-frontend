@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:8080",
+  baseURL: "https://reelforge-backend-h3u7.onrender.com/api",
 });
 
 API.interceptors.request.use((req) => {
