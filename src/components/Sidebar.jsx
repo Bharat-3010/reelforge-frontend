@@ -8,7 +8,7 @@ export default function Sidebar() {
     <div className="w-64 min-h-screen bg-gray-950 text-white p-6">
 
       <h1 className="text-3xl font-bold mb-10 text-blue-500">
-        Zebvo AI
+        ReelForge AI
       </h1>
 
       <div className="flex flex-col gap-6">
