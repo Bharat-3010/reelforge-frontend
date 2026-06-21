@@ -4,6 +4,7 @@ import {
   Route,
 } from "react-router-dom";
 
+import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
@@ -18,44 +19,56 @@ export default function App() {
 
     <BrowserRouter>
 
-      <Routes>
+      <div className="min-h-screen flex flex-col">
 
-        <Route
-          path="/"
-          element={<Login />}
-        />
+        <div className="flex-grow">
 
-        <Route
-          path="/register"
-          element={<Register />}
-        />
+          <Routes>
 
-        <Route
-          path="/dashboard"
-          element={
-            <ProtectedRoute>
-              <Dashboard />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-  path="/generate"
-  element={
-    <ProtectedRoute>
-      <Generate />
-    </ProtectedRoute>
-  }
-/>
-      <Route
-  path="/history"
-  element={
-    <ProtectedRoute>
-      <History />
-    </ProtectedRoute>
-  }
-/>
+            <Route
+              path="/"
+              element={<Login />}
+            />
 
-      </Routes>
+            <Route
+              path="/register"
+              element={<Register />}
+            />
+
+            <Route
+              path="/dashboard"
+              element={
+                <ProtectedRoute>
+                  <Dashboard />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/generate"
+              element={
+                <ProtectedRoute>
+                  <Generate />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/history"
+              element={
+                <ProtectedRoute>
+                  <History />
+                </ProtectedRoute>
+              }
+            />
+
+          </Routes>
+
+        </div>
+
+        <Footer />
+
+      </div>
 
     </BrowserRouter>
   );
